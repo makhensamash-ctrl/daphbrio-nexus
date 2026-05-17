@@ -7,11 +7,11 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const nav = [
+const nav: { to: "/admin" | "/admin/news" | "/admin/media"; label: string; icon: typeof LayoutDashboard; exact?: boolean }[] = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/admin/news", label: "News & Insights", icon: Newspaper },
   { to: "/admin/media", label: "Media Manager", icon: ImageIcon },
-] as const;
+];
 
 export function AdminShell({ children }: { children: ReactNode }) {
   const { session, isAdmin, loading } = useAdmin();
