@@ -80,6 +80,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Daph Brio Cabling" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Daph Brio Cabling — Enterprise IT & Industrial Cabling in South Africa" },
+      { name: "twitter:title", content: "Daph Brio Cabling — Enterprise IT & Industrial Cabling in South Africa" },
+      { property: "og:description", content: "100% black-owned IT infrastructure and industrial cabling firm. Fibre optic, CAT6A, cable trays, CCTV and electrical projects across Gauteng and South Africa." },
+      { name: "twitter:description", content: "100% black-owned IT infrastructure and industrial cabling firm. Fibre optic, CAT6A, cable trays, CCTV and electrical projects across Gauteng and South Africa." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4f6a581e-68b2-4f20-8377-81219cca5cd7/id-preview-1d53c413--cb7738e7-0965-48a1-a3d9-5fb8aa1a82ee.lovable.app-1779047026245.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4f6a581e-68b2-4f20-8377-81219cca5cd7/id-preview-1d53c413--cb7738e7-0965-48a1-a3d9-5fb8aa1a82ee.lovable.app-1779047026245.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
