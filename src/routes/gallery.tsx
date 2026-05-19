@@ -65,6 +65,19 @@ function GalleryPage() {
   );
   const [filter, setFilter] = useState<string>("All");
   const filtered = filter === "All" ? items : items.filter((i) => i.category === filter);
+  const [lightbox, setLightbox] = useState<Item | null>(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setLightbox(null);
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightbox]);
 
   return (
     <SiteLayout>
