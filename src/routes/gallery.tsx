@@ -163,6 +163,37 @@ function GalleryPage() {
           </footer>
         </div>
       </section>
+
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.title}
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in"
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+            aria-label="Close"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          <figure onClick={(e) => e.stopPropagation()} className="max-w-6xl w-full max-h-full flex flex-col items-center">
+            <img
+              src={lightbox.image_url}
+              alt={lightbox.title}
+              className="max-h-[80vh] w-auto max-w-full object-contain rounded-lg shadow-2xl"
+            />
+            <figcaption className="mt-4 text-center text-white">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--safety)]">{lightbox.category}</p>
+              <p className="mt-1 font-display font-semibold text-lg">{lightbox.title}</p>
+              {lightbox.caption && <p className="mt-1 text-sm text-slate-300">{lightbox.caption}</p>}
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </SiteLayout>
   );
 }
