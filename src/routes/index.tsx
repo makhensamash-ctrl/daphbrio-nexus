@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 });
 
 const pillars = [
-  { icon: Network, label: "IT Networking", desc: "CAT6A, UTP, LAN backbone" },
+  { icon: Network, label: "IT Networking", desc: "CAT6A, UTP, LAN backbone, OTDR Test Results" },
   { icon: Cable, label: "Fibre Optic", desc: "SM/MM splicing & termination" },
   { icon: Cpu, label: "Infrastructure", desc: "Cable trays, trunking, OBO" },
   { icon: Camera, label: "Security / CCTV", desc: "End-to-end surveillance" },

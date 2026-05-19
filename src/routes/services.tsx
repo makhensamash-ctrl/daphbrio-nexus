@@ -21,8 +21,8 @@ const services = [
   {
     icon: Network,
     title: "IT Networking Cables",
-    short: "LAN, CAT6A, UTP",
-    body: "End-to-end supply and installation of structured cabling — CAT6A, UTP and LAN backbones for offices, factories and campuses. Certified terminations, labelling and on-site testing.",
+    short: "LAN, CAT6A, UTP, OTDR Test Results",
+    body: "End-to-end supply and installation of structured cabling — CAT6A, UTP and LAN backbones for offices, factories and campuses. Certified terminations, labelling and on-site testing including OTDR results.",
     bullets: ["CAT6A / CAT6 / UTP", "Patch panel termination", "Cable certification & labelling", "Network room buildouts"],
   },
   {
