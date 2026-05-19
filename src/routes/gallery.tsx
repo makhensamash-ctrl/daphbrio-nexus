@@ -123,16 +123,23 @@ function GalleryPage() {
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((item) => (
               <figure key={item.id} className="group relative overflow-hidden rounded-lg shadow-card bg-card">
-                <img
-                  src={item.image_url}
-                  alt={item.title}
-                  loading="lazy"
-                  className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white">
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--safety)]">{item.category}</p>
-                  <p className="mt-0.5 font-display font-semibold">{item.title}</p>
-                </figcaption>
+                <button
+                  type="button"
+                  onClick={() => setLightbox(item)}
+                  className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--safety)]"
+                  aria-label={`View ${item.title} larger`}
+                >
+                  <img
+                    src={item.image_url}
+                    alt={item.title}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white pointer-events-none">
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--safety)]">{item.category}</p>
+                    <p className="mt-0.5 font-display font-semibold">{item.title}</p>
+                  </figcaption>
+                </button>
               </figure>
             ))}
           </div>
