@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { Quote } from "lucide-react";
+import { Quote, X } from "lucide-react";
 
 // seed gallery (shipped from company profile photos)
 import g1 from "@/assets/gallery-cable-tray-factory.jpg";
@@ -65,6 +65,19 @@ function GalleryPage() {
   );
   const [filter, setFilter] = useState<string>("All");
   const filtered = filter === "All" ? items : items.filter((i) => i.category === filter);
+  const [lightbox, setLightbox] = useState<Item | null>(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setLightbox(null);
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightbox]);
 
   return (
     <SiteLayout>
@@ -110,16 +123,23 @@ function GalleryPage() {
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((item) => (
               <figure key={item.id} className="group relative overflow-hidden rounded-lg shadow-card bg-card">
-                <img
-                  src={item.image_url}
-                  alt={item.title}
-                  loading="lazy"
-                  className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white">
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--safety)]">{item.category}</p>
-                  <p className="mt-0.5 font-display font-semibold">{item.title}</p>
-                </figcaption>
+                <button
+                  type="button"
+                  onClick={() => setLightbox(item)}
+                  className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--safety)]"
+                  aria-label={`View ${item.title} larger`}
+                >
+                  <img
+                    src={item.image_url}
+                    alt={item.title}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 via-black/40 to-transparent text-white pointer-events-none">
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--safety)]">{item.category}</p>
+                    <p className="mt-0.5 font-display font-semibold">{item.title}</p>
+                  </figcaption>
+                </button>
               </figure>
             ))}
           </div>
@@ -143,6 +163,37 @@ function GalleryPage() {
           </footer>
         </div>
       </section>
+
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.title}
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in"
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition"
+            aria-label="Close"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          <figure onClick={(e) => e.stopPropagation()} className="max-w-6xl w-full max-h-full flex flex-col items-center">
+            <img
+              src={lightbox.image_url}
+              alt={lightbox.title}
+              className="max-h-[80vh] w-auto max-w-full object-contain rounded-lg shadow-2xl"
+            />
+            <figcaption className="mt-4 text-center text-white">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[var(--safety)]">{lightbox.category}</p>
+              <p className="mt-1 font-display font-semibold text-lg">{lightbox.title}</p>
+              {lightbox.caption && <p className="mt-1 text-sm text-slate-300">{lightbox.caption}</p>}
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </SiteLayout>
   );
 }
