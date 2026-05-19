@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
-import { Quote } from "lucide-react";
+import { Quote, X } from "lucide-react";
 
 // seed gallery (shipped from company profile photos)
 import g1 from "@/assets/gallery-cable-tray-factory.jpg";
