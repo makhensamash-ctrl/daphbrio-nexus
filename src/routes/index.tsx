@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Award, Clock, Users, Cable, Network, Cpu, Zap,
 import { SiteLayout } from "@/components/SiteLayout";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-cabling.jpg";
+import heroImg from "@/assets/daphbrio-logo.jpeg";
 import teamImg from "@/assets/team-workers.jpg";
 import g1 from "@/assets/gallery-fiber-patch.jpg";
 import g2 from "@/assets/gallery-yellow-trays.jpg";
@@ -34,57 +34,61 @@ const pillars = [
 function Home() {
   return (
     <SiteLayout>
-      {/* HERO */}
-      <section className="relative isolate overflow-hidden">
-        <img
-          src={heroImg}
-          alt="Industrial cable tray installation across factory ceiling"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 gradient-overlay" />
+      {/* HERO — logo as the centerpiece */}
+      <section className="relative isolate overflow-hidden bg-[var(--slate-deep)]">
         <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-white/80 backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--safety)]" />
-              100% Black-Owned • Reg 2019/309218/07
-            </div>
-            <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.05]">
-              Engineering Africa's
-              <br />
-              <span className="text-[var(--safety)]">enterprise backbone.</span>
-            </h1>
-            <p className="mt-6 text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed">
-              From plant-floor fibre runs at Ford to campus-wide CAT6A at UJ — we deliver
-              large-scale IT and industrial cabling projects on time, OHS-compliant, end to end.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-[var(--safety)] text-[var(--safety-foreground)] hover:bg-[var(--safety)]/90">
-                <Link to="/contact">Request a Quote <ArrowRight className="ml-1 h-4 w-4" /></Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 bg-white/5 text-white hover:bg-white/15 hover:text-white">
-                <Link to="/contact">Submit Tender Inquiry</Link>
-              </Button>
-            </div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <img
+            src={heroImg}
+            alt="Daph Brio Cabling and Trading Project logo"
+            width={1920}
+            height={1080}
+            className="mx-auto w-full max-w-5xl rounded-xl shadow-elevated object-contain"
+          />
+        </div>
+      </section>
 
-            <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
-              {[
-                { v: "6+", l: "Years operating" },
-                { v: "20+", l: "Enterprise sites" },
-                { v: "100%", l: "OHS compliance" },
-                { v: "24/7", l: "Project response" },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div className="font-display text-2xl sm:text-3xl font-bold text-white">{s.v}</div>
-                  <div className="text-[11px] uppercase tracking-[0.14em] text-slate-300 mt-1">{s.l}</div>
-                </div>
-              ))}
-            </div>
+      {/* INTRO + CTA (moved out of hero) */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--safety)]" />
+            100% Black-Owned • Reg 2019/309218/07
+          </div>
+          <h1 className="mt-6 font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
+            Engineering Africa's
+            <br />
+            <span className="text-primary">enterprise backbone.</span>
+          </h1>
+          <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
+            From plant-floor fibre runs at Ford to campus-wide CAT6A at UJ — we deliver
+            large-scale IT and industrial cabling projects on time, OHS-compliant, end to end.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Button asChild size="lg" className="bg-[var(--safety)] text-[var(--safety-foreground)] hover:bg-[var(--safety)]/90">
+              <Link to="/contact">Request a Quote <ArrowRight className="ml-1 h-4 w-4" /></Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link to="/contact">Submit Tender Inquiry</Link>
+            </Button>
+          </div>
+
+          <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
+            {[
+              { v: "6+", l: "Years operating" },
+              { v: "20+", l: "Enterprise sites" },
+              { v: "100%", l: "OHS compliance" },
+              { v: "24/7", l: "Project response" },
+            ].map((s) => (
+              <div key={s.l}>
+                <div className="font-display text-2xl sm:text-3xl font-bold">{s.v}</div>
+                <div className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground mt-1">{s.l}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       <TrustBar />
 
