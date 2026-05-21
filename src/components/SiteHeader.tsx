@@ -1,8 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X, Cable } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/daphbrio-logo.jpeg";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -20,16 +21,15 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="grid h-9 w-9 place-items-center rounded-md gradient-hero text-primary-foreground">
-            <Cable className="h-5 w-5" />
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-sm font-bold tracking-tight">DAPH BRIO</span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Cabling • Trading • Projects
-            </span>
-          </span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img
+            src={logo}
+            alt="Daph Brio Cabling and Trading Project logo"
+            width={180}
+            height={48}
+            className="h-11 w-auto rounded-sm object-cover"
+          />
+          <span className="sr-only">Daph Brio Cabling and Trading Project</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

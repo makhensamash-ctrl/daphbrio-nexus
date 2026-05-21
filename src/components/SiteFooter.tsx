@@ -1,17 +1,17 @@
 import { Link } from "@tanstack/react-router";
-import { Cable, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
+import logo from "@/assets/daphbrio-logo.jpeg";
 
 export function SiteFooter() {
   return (
     <footer className="bg-[var(--slate-deep)] text-slate-200 mt-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-12 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-md bg-[var(--safety)] text-[var(--safety-foreground)]">
-              <Cable className="h-5 w-5" />
-            </span>
-            <span className="font-display font-bold tracking-tight">DAPH BRIO</span>
-          </div>
+          <img
+            src={logo}
+            alt="Daph Brio Cabling and Trading Project logo"
+            className="h-14 w-auto rounded-sm object-cover"
+          />
           <p className="mt-4 text-sm text-slate-400 leading-relaxed">
             100% black-owned IT infrastructure and industrial cabling firm. Reg: 2019/309218/07.
           </p>
