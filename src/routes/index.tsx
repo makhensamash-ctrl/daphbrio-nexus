@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Award, Clock, Users, Cable, Network, Cpu, Zap,
 import { SiteLayout } from "@/components/SiteLayout";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-cabling.jpg";
+import heroImg from "@/assets/daphbrio-logo.jpeg";
 import teamImg from "@/assets/team-workers.jpg";
 import g1 from "@/assets/gallery-fiber-patch.jpg";
 import g2 from "@/assets/gallery-yellow-trays.jpg";
