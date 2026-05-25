@@ -4,7 +4,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/daphbrio-logo.jpeg";
-import teamImg from "@/assets/team-workers.jpg";
+import teamImg from "@/assets/why-daphbrio-rack.jpeg";
 import g1 from "@/assets/gallery-fiber-patch.jpg";
 import g2 from "@/assets/gallery-yellow-trays.jpg";
 import g3 from "@/assets/gallery-server-rack.jpg";
