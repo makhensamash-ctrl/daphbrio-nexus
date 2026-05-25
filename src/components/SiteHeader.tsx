@@ -20,14 +20,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo}
             alt="Daph Brio Cabling and Trading Project logo"
-            width={180}
-            height={48}
-            className="h-11 w-auto object-contain"
+            width={280}
+            height={80}
+            className="h-16 md:h-20 w-auto object-contain"
           />
           <span className="sr-only">Daph Brio Cabling and Trading Project</span>
         </Link>
