@@ -25,9 +25,9 @@ export function SiteHeader() {
           <img
             src={logo}
             alt="Daph Brio Cabling and Trading Project logo"
-            width={180}
-            height={48}
-            className="h-11 w-auto object-contain"
+            width={280}
+            height={80}
+            className="h-16 md:h-20 w-auto object-contain"
           />
           <span className="sr-only">Daph Brio Cabling and Trading Project</span>
         </Link>
