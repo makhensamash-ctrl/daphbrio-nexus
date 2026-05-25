@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/daphbrio-logo-header.jpeg";
+import logo from "@/assets/daphbrio-logo-header.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -27,7 +27,7 @@ export function SiteHeader() {
             alt="Daph Brio Cabling and Trading Project logo"
             width={180}
             height={48}
-            className="h-11 w-auto rounded-sm object-cover"
+            className="h-11 w-auto object-contain"
           />
           <span className="sr-only">Daph Brio Cabling and Trading Project</span>
         </Link>
