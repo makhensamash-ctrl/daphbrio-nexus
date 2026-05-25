@@ -93,7 +93,7 @@ function Home() {
       <TrustBar />
 
       {/* WHY US */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-slate-50">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Why Daph Brio</p>
