@@ -136,17 +136,18 @@ function Home() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="bg-[var(--slate-deep)] text-slate-100">
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[var(--safety)] font-semibold">Service Pillars</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Service Pillars</p>
               <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold">Five capabilities. One supplier.</h2>
             </div>
-            <Button asChild variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/15 hover:text-white w-fit">
+            <Button asChild variant="outline" className="w-fit">
               <Link to="/services">All services <ArrowRight className="ml-1 h-4 w-4" /></Link>
             </Button>
           </div>
+
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {pillars.map(({ icon: Icon, label, desc }, idx) => (
