@@ -5,9 +5,9 @@ import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/daphbrio-logo.jpeg";
 import teamImg from "@/assets/why-daphbrio-rack.jpeg";
-import g1 from "@/assets/gallery-fiber-patch.jpg";
-import g2 from "@/assets/gallery-yellow-trays.jpg";
-import g3 from "@/assets/gallery-server-rack.jpg";
+import g1 from "@/assets/gallery-cable-tray-ceiling.jpeg";
+import g2 from "@/assets/gallery-network-cabinet.jpeg";
+import g3 from "@/assets/gallery-dingli-lift.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -184,9 +184,9 @@ function Home() {
         </div>
         <div className="mt-12 grid gap-4 sm:grid-cols-3">
           {[
-            { src: g1, t: "Fibre Optic Splicing", c: "Ford Motor Company" },
-            { src: g2, t: "Industrial Cable Trays", c: "Plant infrastructure" },
-            { src: g3, t: "Server Rack Builds", c: "Network rooms" },
+            { src: g1, t: "Cable Tray Ceiling Run", c: "Plant infrastructure" },
+            { src: g2, t: "Network Cabinet Build-Out", c: "LAN networks" },
+            { src: g3, t: "Aerial Work Platform Install", c: "Industrial cabling" },
           ].map((p) => (
             <figure key={p.t} className="group relative overflow-hidden rounded-lg shadow-card">
               <img src={p.src} alt={p.t} loading="lazy" className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" />
