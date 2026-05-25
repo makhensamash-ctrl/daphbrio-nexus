@@ -154,16 +154,17 @@ function Home() {
               <Link
                 to="/services"
                 key={label}
-                className="group rounded-lg border border-white/10 bg-white/[0.03] p-5 transition hover:border-[var(--safety)]/60 hover:bg-white/[0.06]"
+                className="group rounded-lg border border-border bg-card p-5 shadow-card transition hover:border-primary/60 hover:shadow-elevated"
               >
                 <div className="flex items-center justify-between">
-                  <span className="grid h-10 w-10 place-items-center rounded-md bg-[var(--safety)]/15 text-[var(--safety)] group-hover:bg-[var(--safety)] group-hover:text-[var(--safety-foreground)] transition">
+                  <span className="grid h-10 w-10 place-items-center rounded-md bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <span className="text-xs text-slate-500">0{idx + 1}</span>
+                  <span className="text-xs text-muted-foreground">0{idx + 1}</span>
                 </div>
                 <p className="mt-5 font-display font-semibold">{label}</p>
-                <p className="mt-1.5 text-sm text-slate-400">{desc}</p>
+                <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
+
               </Link>
             ))}
           </div>
