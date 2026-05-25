@@ -7,15 +7,16 @@ import { cn } from "@/lib/utils";
 import { Quote, X } from "lucide-react";
 
 // seed gallery (shipped from company profile photos)
-import g1 from "@/assets/gallery-cable-tray-factory.jpg";
-import g2 from "@/assets/gallery-cable-trays-closeup.jpg";
-import g3 from "@/assets/gallery-network-switch.jpg";
-import g4 from "@/assets/gallery-scissor-lift.jpg";
-import g5 from "@/assets/gallery-fiber-patch.jpg";
-import g6 from "@/assets/gallery-yellow-trays.jpg";
-import g7 from "@/assets/gallery-server-rack.jpg";
-import g8 from "@/assets/gallery-red-pipes.jpg";
-import g9 from "@/assets/gallery-warehouse-cabling.jpg";
+import g1 from "@/assets/gallery-cable-tray-ceiling.jpeg";
+import g2 from "@/assets/gallery-scissor-lift-exterior.jpeg";
+import g3 from "@/assets/gallery-dingli-lift.jpeg";
+import g4 from "@/assets/gallery-testpro-kits.jpeg";
+import g5 from "@/assets/gallery-network-cabinet.jpeg";
+import g6 from "@/assets/gallery-enclosure-cooling.jpeg";
+import g7 from "@/assets/gallery-core-switch.jpeg";
+import g8 from "@/assets/gallery-patch-panel-outlet.jpeg";
+import g9 from "@/assets/gallery-wall-outlet-power.jpeg";
+import g10 from "@/assets/gallery-cable-pulling.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -34,15 +35,16 @@ export const Route = createFileRoute("/gallery")({
 type Item = { id: string; title: string; category: string; image_url: string; caption?: string | null };
 
 const seed: Item[] = [
-  { id: "s1", title: "Plant cable tray run", category: "Cable Trays", image_url: g1 },
-  { id: "s2", title: "OBO tray detail", category: "Cable Trays", image_url: g2 },
-  { id: "s3", title: "Core network switch", category: "LAN Networks", image_url: g3 },
-  { id: "s4", title: "Scissor-lift cable pull", category: "Cable Trays", image_url: g4 },
-  { id: "s5", title: "Fibre patch panel", category: "Fiber Splicing", image_url: g5 },
-  { id: "s6", title: "Industrial trays — Ford", category: "Cable Trays", image_url: g6 },
-  { id: "s7", title: "Server rack build", category: "LAN Networks", image_url: g7 },
-  { id: "s8", title: "Electrical containment", category: "Electrical", image_url: g8 },
-  { id: "s9", title: "Warehouse cabling", category: "Cable Trays", image_url: g9 },
+  { id: "s1", title: "Cable tray ceiling run", category: "Cable Trays", image_url: g1 },
+  { id: "s2", title: "Exterior scissor-lift install", category: "Cable Trays", image_url: g2 },
+  { id: "s3", title: "Aerial work platform — plant", category: "Cable Trays", image_url: g3 },
+  { id: "s4", title: "TestPro certification kits", category: "LAN Networks", image_url: g4 },
+  { id: "s5", title: "Network cabinet build-out", category: "LAN Networks", image_url: g5 },
+  { id: "s6", title: "Climate-controlled enclosure", category: "LAN Networks", image_url: g6 },
+  { id: "s7", title: "Core switch — fibre uplinks", category: "LAN Networks", image_url: g7 },
+  { id: "s8", title: "Patch panel wall outlet", category: "LAN Networks", image_url: g8 },
+  { id: "s9", title: "Data & power wall point", category: "Electrical", image_url: g9 },
+  { id: "s10", title: "Cable pulling — office fit-out", category: "LAN Networks", image_url: g10 },
 ];
 
 function GalleryPage() {
