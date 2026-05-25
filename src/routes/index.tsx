@@ -108,10 +108,11 @@ function Home() {
 
             <div className="mt-8 grid sm:grid-cols-2 gap-4">
               {[
-                { i: ShieldCheck, t: "OHS Act compliant", d: "Site-level safety officers on every project." },
-                { i: Award, t: "100% black-owned", d: "Reg 2019/309218/07, Pretoria-based." },
-                { i: Clock, t: "On-time delivery", d: "Schedule-driven crews with daily charts." },
-                { i: Users, t: "Trained technicians", d: "Internal training on every project scope." },
+              { i: ShieldCheck, t: "OHS Act compliant", d: "Site-level safety officers on every project." },
+              { i: Award, t: "100% black-owned", d: "Reg 2019/309218/07, Pretoria-based." },
+              { i: Clock, t: "On-time delivery", d: "Schedule-driven crews with daily charts." },
+              { i: Users, t: "Trained technicians", d: "Internal training on every project scope." },
+              { i: Users, t: "50% women-owned", d: "Proudly women-led ownership and leadership." },
               ].map(({ i: Icon, t, d }) => (
                 <div key={t} className="rounded-lg border border-border p-4 bg-card shadow-card">
                   <Icon className="h-5 w-5 text-primary" />
