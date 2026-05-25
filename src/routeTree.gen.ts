@@ -20,6 +20,7 @@ import { Route as AdminUsersRouteImport } from './routes/admin.users'
 import { Route as AdminNewsRouteImport } from './routes/admin.news'
 import { Route as AdminMediaRouteImport } from './routes/admin.media'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminChangePasswordRouteImport } from './routes/admin.change-password'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -76,6 +77,11 @@ const AdminLoginRoute = AdminLoginRouteImport.update({
   path: '/admin/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminChangePasswordRoute = AdminChangePasswordRouteImport.update({
+  id: '/admin/change-password',
+  path: '/admin/change-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -84,6 +90,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/insights': typeof InsightsRoute
   '/services': typeof ServicesRoute
+  '/admin/change-password': typeof AdminChangePasswordRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/media': typeof AdminMediaRoute
   '/admin/news': typeof AdminNewsRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/insights': typeof InsightsRoute
   '/services': typeof ServicesRoute
+  '/admin/change-password': typeof AdminChangePasswordRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/media': typeof AdminMediaRoute
   '/admin/news': typeof AdminNewsRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/insights': typeof InsightsRoute
   '/services': typeof ServicesRoute
+  '/admin/change-password': typeof AdminChangePasswordRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/media': typeof AdminMediaRoute
   '/admin/news': typeof AdminNewsRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/insights'
     | '/services'
+    | '/admin/change-password'
     | '/admin/login'
     | '/admin/media'
     | '/admin/news'
@@ -139,6 +149,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/insights'
     | '/services'
+    | '/admin/change-password'
     | '/admin/login'
     | '/admin/media'
     | '/admin/news'
@@ -152,6 +163,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/insights'
     | '/services'
+    | '/admin/change-password'
     | '/admin/login'
     | '/admin/media'
     | '/admin/news'
@@ -166,6 +178,7 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   InsightsRoute: typeof InsightsRoute
   ServicesRoute: typeof ServicesRoute
+  AdminChangePasswordRoute: typeof AdminChangePasswordRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminMediaRoute: typeof AdminMediaRoute
   AdminNewsRoute: typeof AdminNewsRoute
@@ -252,6 +265,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/change-password': {
+      id: '/admin/change-password'
+      path: '/admin/change-password'
+      fullPath: '/admin/change-password'
+      preLoaderRoute: typeof AdminChangePasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -262,6 +282,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   InsightsRoute: InsightsRoute,
   ServicesRoute: ServicesRoute,
+  AdminChangePasswordRoute: AdminChangePasswordRoute,
   AdminLoginRoute: AdminLoginRoute,
   AdminMediaRoute: AdminMediaRoute,
   AdminNewsRoute: AdminNewsRoute,
