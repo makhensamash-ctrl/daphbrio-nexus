@@ -18,7 +18,7 @@ const nav: { to: "/admin" | "/admin/news" | "/admin/media" | "/admin/users"; lab
 
 
 export function AdminShell({ children }: { children: ReactNode }) {
-  const { session, isAdmin, loading } = useAdmin();
+  const { session, isAdmin, loading, mustChangePassword } = useAdmin();
   const navigate = useNavigate();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,8 +26,11 @@ export function AdminShell({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!loading && (!session || !isAdmin)) {
       navigate({ to: "/admin/login" });
+    } else if (!loading && session && isAdmin && mustChangePassword && pathname !== "/admin/change-password") {
+      navigate({ to: "/admin/change-password" });
     }
-  }, [loading, session, isAdmin, navigate]);
+  }, [loading, session, isAdmin, mustChangePassword, pathname, navigate]);
+
 
   // Close mobile drawer on route change
   useEffect(() => { setMobileOpen(false); }, [pathname]);
