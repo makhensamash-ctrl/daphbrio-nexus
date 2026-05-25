@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/daphbrio-logo-header.jpeg";
+import logo from "@/assets/daphbrio-logo-header.png";
 
 const nav = [
   { to: "/", label: "Home" },
