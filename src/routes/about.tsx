@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import teamImg from "@/assets/team-workers.jpg";
+import teamImg from "@/assets/about-core-switch.jpeg";
 import { CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
