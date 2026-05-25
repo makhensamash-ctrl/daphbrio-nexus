@@ -136,7 +136,7 @@ function Home() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="bg-slate-50">
+      <section className="bg-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             <div>
