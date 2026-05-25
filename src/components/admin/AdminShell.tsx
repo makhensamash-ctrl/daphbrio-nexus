@@ -1,18 +1,20 @@
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
-import { Cable, LayoutDashboard, Newspaper, Image as ImageIcon, LogOut, ExternalLink, Menu } from "lucide-react";
+import { Cable, LayoutDashboard, Newspaper, Image as ImageIcon, Users, LogOut, ExternalLink, Menu } from "lucide-react";
 import { useAdmin } from "@/hooks/use-admin";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const nav: { to: "/admin" | "/admin/news" | "/admin/media"; label: string; icon: typeof LayoutDashboard; exact?: boolean }[] = [
+const nav: { to: "/admin" | "/admin/news" | "/admin/media" | "/admin/users"; label: string; icon: typeof LayoutDashboard; exact?: boolean }[] = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { to: "/admin/news", label: "News & Insights", icon: Newspaper },
   { to: "/admin/media", label: "Media Manager", icon: ImageIcon },
+  { to: "/admin/users", label: "Users", icon: Users },
 ];
+
 
 
 export function AdminShell({ children }: { children: ReactNode }) {
