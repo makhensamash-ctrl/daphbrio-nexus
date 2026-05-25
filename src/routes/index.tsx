@@ -68,9 +68,6 @@ function Home() {
             <Button asChild size="lg" className="bg-[var(--safety)] text-[var(--safety-foreground)] hover:bg-[var(--safety)]/90">
               <Link to="/contact">Request a Quote <ArrowRight className="ml-1 h-4 w-4" /></Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/contact">Submit Tender Inquiry</Link>
-            </Button>
           </div>
 
           <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
@@ -216,9 +213,6 @@ function Home() {
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-[var(--safety)] text-[var(--safety-foreground)] hover:bg-[var(--safety)]/90">
                 <Link to="/contact">Request a Quote</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
-                <Link to="/about">About the company</Link>
               </Button>
             </div>
           </div>
