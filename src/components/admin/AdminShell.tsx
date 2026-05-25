@@ -1,10 +1,11 @@
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
-import { useEffect } from "react";
-import { Cable, LayoutDashboard, Newspaper, Image as ImageIcon, LogOut, ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Cable, LayoutDashboard, Newspaper, Image as ImageIcon, LogOut, ExternalLink, Menu } from "lucide-react";
 import { useAdmin } from "@/hooks/use-admin";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 const nav: { to: "/admin" | "/admin/news" | "/admin/media"; label: string; icon: typeof LayoutDashboard; exact?: boolean }[] = [
@@ -12,6 +13,7 @@ const nav: { to: "/admin" | "/admin/news" | "/admin/media"; label: string; icon:
   { to: "/admin/news", label: "News & Insights", icon: Newspaper },
   { to: "/admin/media", label: "Media Manager", icon: ImageIcon },
 ];
+
 
 export function AdminShell({ children }: { children: ReactNode }) {
   const { session, isAdmin, loading } = useAdmin();
