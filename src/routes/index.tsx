@@ -170,7 +170,7 @@ function Home() {
       </section>
 
       {/* PROJECTS PREVIEW */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-slate-50">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Recent Work</p>
