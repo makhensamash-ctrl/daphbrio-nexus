@@ -34,5 +34,11 @@ export function useAdmin() {
     return () => sub.subscription.unsubscribe();
   }, []);
 
-  return { session, isAdmin, loading };
+  const mustChangePassword = Boolean(
+    (session?.user?.user_metadata as { must_change_password?: boolean } | undefined)
+      ?.must_change_password,
+  );
+
+  return { session, isAdmin, loading, mustChangePassword };
 }
+
