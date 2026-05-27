@@ -79,7 +79,11 @@ function AdminLogin() {
             existing admin — public sign-up is disabled.
           </p>
 
-          <form onSubmit={submit} className="mt-8 space-y-4">
+          <div className="mt-6 rounded-md border border-amber-500/40 bg-amber-50 text-amber-900 px-4 py-3 text-sm">
+            Sign-in is temporarily disabled. Please check back later.
+          </div>
+
+          <form onSubmit={submit} className="mt-8 space-y-4" aria-disabled="true">
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
               <Input id="email" name="email" type="email" autoComplete="email" required />
