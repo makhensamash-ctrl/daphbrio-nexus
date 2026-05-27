@@ -83,10 +83,10 @@ function AdminLogin() {
             Sign-in is temporarily disabled. Please check back later.
           </div>
 
-          <form onSubmit={submit} className="mt-8 space-y-4" aria-disabled="true">
+          <form onSubmit={(e) => e.preventDefault()} className="mt-8 space-y-4 opacity-60 pointer-events-none" aria-disabled="true">
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" autoComplete="email" required />
+              <Input id="email" name="email" type="email" autoComplete="email" disabled />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>
@@ -95,12 +95,12 @@ function AdminLogin() {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                required
+                disabled
                 minLength={8}
               />
             </div>
-            <Button type="submit" disabled={busy} className="w-full">
-              {busy ? "Please wait…" : "Sign in"}
+            <Button type="submit" disabled className="w-full">
+              Sign in disabled
             </Button>
           </form>
 
