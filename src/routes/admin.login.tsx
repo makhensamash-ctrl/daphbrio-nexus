@@ -79,14 +79,10 @@ function AdminLogin() {
             existing admin — public sign-up is disabled.
           </p>
 
-          <div className="mt-6 rounded-md border border-amber-500/40 bg-amber-50 text-amber-900 px-4 py-3 text-sm">
-            Sign-in is temporarily disabled. Please check back later.
-          </div>
-
-          <form onSubmit={(e) => e.preventDefault()} className="mt-8 space-y-4 opacity-60 pointer-events-none" aria-disabled="true">
+          <form onSubmit={submit} className="mt-8 space-y-4">
             <div className="space-y-1.5">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" name="email" type="email" autoComplete="email" disabled />
+              <Input id="email" name="email" type="email" autoComplete="email" required />
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>
@@ -95,12 +91,12 @@ function AdminLogin() {
                 name="password"
                 type="password"
                 autoComplete="current-password"
-                disabled
+                required
                 minLength={8}
               />
             </div>
-            <Button type="submit" disabled className="w-full">
-              Sign in disabled
+            <Button type="submit" disabled={busy} className="w-full">
+              {busy ? "Please wait…" : "Sign in"}
             </Button>
           </form>
 
