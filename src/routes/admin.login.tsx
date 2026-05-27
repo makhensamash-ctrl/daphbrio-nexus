@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Cable, ShieldCheck } from "lucide-react";
+import { Cable, Eye, EyeOff, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import { useAdmin } from "@/hooks/use-admin";
 
