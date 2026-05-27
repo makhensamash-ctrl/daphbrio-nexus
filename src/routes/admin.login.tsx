@@ -22,6 +22,8 @@ function AdminLogin() {
   const navigate = useNavigate();
   const { session, isAdmin, loading, mustChangePassword } = useAdmin();
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
 
   useEffect(() => {
     if (loading || !session) return;
