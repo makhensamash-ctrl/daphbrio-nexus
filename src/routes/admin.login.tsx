@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Cable, ShieldCheck } from "lucide-react";
+import { Cable, Eye, EyeOff, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import { useAdmin } from "@/hooks/use-admin";
 
@@ -22,6 +22,8 @@ function AdminLogin() {
   const navigate = useNavigate();
   const { session, isAdmin, loading, mustChangePassword } = useAdmin();
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
 
   useEffect(() => {
     if (loading || !session) return;
@@ -86,14 +88,25 @@ function AdminLogin() {
             </div>
             <div className="space-y-1.5">
               <Label htmlFor="password">Password</Label>
-              <Input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                minLength={8}
-              />
+              <div className="relative">
+                <Input
+                  id="password"
+                  name="password"
+                  type={showPassword ? "text" : "password"}
+                  autoComplete="current-password"
+                  required
+                  minLength={8}
+                  className="pr-10"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword((v) => !v)}
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                >
+                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                </button>
+              </div>
             </div>
             <Button type="submit" disabled={busy} className="w-full">
               {busy ? "Please wait…" : "Sign in"}
