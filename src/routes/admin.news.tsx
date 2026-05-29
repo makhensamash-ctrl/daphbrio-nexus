@@ -12,7 +12,7 @@ import { Plus, Pencil, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/admin/news")({
-  head: () => ({ meta: [{ title: "News — Daph Brio CMS" }, { name: "robots", content: "noindex,nofollow" }] }),
+  head: () => ({ meta: [{ title: "News — Daphbrio CMS" }, { name: "robots", content: "noindex,nofollow" }] }),
   component: NewsAdmin,
 });
 

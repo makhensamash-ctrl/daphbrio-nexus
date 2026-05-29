@@ -24,12 +24,12 @@ export function SiteHeader() {
         <Link to="/" className="flex items-center gap-3 group">
           <img
             src={logo}
-            alt="Daph Brio Cabling and Trading Project logo"
+            alt="Daphbrio Cabling and Trading Project logo"
             width={280}
             height={80}
             className="h-16 md:h-20 w-auto object-contain"
           />
-          <span className="sr-only">Daph Brio Cabling and Trading Project</span>
+          <span className="sr-only">Daphbrio Cabling and Trading Project</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

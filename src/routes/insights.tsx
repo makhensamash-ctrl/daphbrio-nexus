@@ -7,9 +7,9 @@ import { Calendar, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/insights")({
   head: () => ({
     meta: [
-      { title: "Insights & News — Daph Brio Cabling" },
-      { name: "description", content: "Company news, contract wins and infrastructure thought leadership from Daph Brio Cabling." },
-      { property: "og:title", content: "Insights — Daph Brio Cabling" },
+      { title: "Insights & News — Daphbrio Cabling" },
+      { name: "description", content: "Company news, contract wins and infrastructure thought leadership from Daphbrio Cabling." },
+      { property: "og:title", content: "Insights — Daphbrio Cabling" },
       { property: "og:description", content: "Articles on IT cabling, fibre optic and industrial infrastructure across South Africa." },
       { property: "og:url", content: "/insights" },
     ],

@@ -10,7 +10,7 @@ import { UploadCloud, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/admin/media")({
-  head: () => ({ meta: [{ title: "Media Manager — Daph Brio CMS" }, { name: "robots", content: "noindex,nofollow" }] }),
+  head: () => ({ meta: [{ title: "Media Manager — Daphbrio CMS" }, { name: "robots", content: "noindex,nofollow" }] }),
   component: MediaAdmin,
 });
 

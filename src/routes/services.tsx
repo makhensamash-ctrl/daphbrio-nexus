@@ -8,7 +8,7 @@ export const Route = createFileRoute("/services")({
     meta: [
       { title: "Services — IT Cabling, Fibre Optic, Cable Trays, CCTV, Electrical" },
       { name: "description", content: "Supply and installation of CAT6A LAN, SM/MM fibre optic, OBO cable trays and trunking, CCTV security systems and LV/MV/HV electrical cables." },
-      { property: "og:title", content: "Services — Daph Brio Cabling" },
+      { property: "og:title", content: "Services — Daphbrio Cabling" },
       { property: "og:description", content: "Five enterprise service pillars: IT networking, fibre optic, infrastructure, security, electrical." },
       { property: "og:url", content: "/services" },
     ],

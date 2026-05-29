@@ -31,7 +31,7 @@ import { useAdmin } from "@/hooks/use-admin";
 export const Route = createFileRoute("/admin/users")({
   head: () => ({
     meta: [
-      { title: "Users — Daph Brio CMS" },
+      { title: "Users — Daphbrio CMS" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

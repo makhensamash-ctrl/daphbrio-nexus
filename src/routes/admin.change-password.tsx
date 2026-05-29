@@ -13,7 +13,7 @@ import { clearMustChangePassword } from "@/lib/admin-users.functions";
 export const Route = createFileRoute("/admin/change-password")({
   head: () => ({
     meta: [
-      { title: "Set a new password — Daph Brio CMS" },
+      { title: "Set a new password — Daphbrio CMS" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
