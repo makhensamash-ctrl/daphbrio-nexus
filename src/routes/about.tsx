@@ -55,7 +55,7 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
           <div>
-            <img src={teamImg} alt="Structured cabling install — server rack" className="rounded-xl shadow-card w-full h-full object-cover aspect-[3/4]" loading="lazy" />
+            <img src={teamImg} alt="Crew on site" className="rounded-xl shadow-card w-full object-cover aspect-[4/3]" loading="lazy" />
           </div>
           <div className="space-y-10">
             <div>
