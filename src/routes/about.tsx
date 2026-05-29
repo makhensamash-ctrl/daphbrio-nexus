@@ -6,9 +6,9 @@ import { CheckCircle2 } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Daph Brio Cabling Trading & Projects" },
+      { title: "About — Daphbrio Cabling Trading & Projects" },
       { name: "description", content: "Established 2019, 100% black-owned. Discover our mission, values and organisational structure delivering enterprise IT infrastructure across South Africa." },
-      { property: "og:title", content: "About Daph Brio Cabling" },
+      { property: "og:title", content: "About Daphbrio Cabling" },
       { property: "og:description", content: "100% black-owned IT cabling and industrial infrastructure firm based in Hammanskraal." },
       { property: "og:url", content: "/about" },
     ],
@@ -45,7 +45,7 @@ function AboutPage() {
             Six years of building Africa's enterprise backbone.
           </h1>
           <p className="mt-5 text-lg text-slate-200 max-w-2xl">
-            Daph Brio Trading and Projects (PTY) LTD was registered as a private company in 2019
+            Daphbrio Trading and Projects (PTY) LTD was registered as a private company in 2019
             and began trading the same year. Today we serve major public and private sector clients
             across South Africa.
           </p>

@@ -11,7 +11,7 @@ import { useAdmin } from "@/hooks/use-admin";
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
-      { title: "Admin — Daph Brio CMS" },
+      { title: "Admin — Daphbrio CMS" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
@@ -66,7 +66,7 @@ function AdminLogin() {
           <ShieldCheck className="h-10 w-10 text-[var(--safety)]" />
           <h1 className="mt-4 font-display text-3xl font-bold">Secure CMS gateway.</h1>
           <p className="mt-3 text-slate-200 max-w-md">
-            Manage news, contract wins and the project gallery for Daph Brio Cabling.
+            Manage news, contract wins and the project gallery for Daphbrio Cabling.
             Access is restricted to authorised administrators.
           </p>
         </div>

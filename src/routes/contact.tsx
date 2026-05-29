@@ -13,9 +13,9 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Daph Brio Cabling Trading & Projects" },
+      { title: "Contact — Daphbrio Cabling Trading & Projects" },
       { name: "description", content: "Request a quote, submit a tender inquiry or visit us at 3210 Block B, New Eersterus, Hammanskraal 0400." },
-      { property: "og:title", content: "Contact Daph Brio Cabling" },
+      { property: "og:title", content: "Contact Daphbrio Cabling" },
       { property: "og:description", content: "Get in touch for IT cabling, fibre optic and infrastructure projects." },
       { property: "og:url", content: "/contact" },
     ],
@@ -119,7 +119,7 @@ function ContactPage() {
 
           <div className="rounded-xl overflow-hidden border border-border shadow-card aspect-[4/3] bg-muted">
             <iframe
-              title="Daph Brio office location"
+              title="Daphbrio office location"
               src="https://www.google.com/maps?q=New+Eersterus,+Hammanskraal,+0400&output=embed"
               className="w-full h-full"
               loading="lazy"

@@ -21,9 +21,9 @@ import g10 from "@/assets/gallery-cable-pulling.jpeg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Project Gallery — Daph Brio Cabling" },
+      { title: "Project Gallery — Daphbrio Cabling" },
       { name: "description", content: "Installation portfolio: fibre splicing, cable trays, LAN networks, server racks and industrial infrastructure across South Africa." },
-      { property: "og:title", content: "Project Gallery — Daph Brio Cabling" },
+      { property: "og:title", content: "Project Gallery — Daphbrio Cabling" },
       { property: "og:description", content: "Enterprise installations including Ford Motor Company, UJ and Capitec Bank." },
       { property: "og:url", content: "/gallery" },
     ],
@@ -153,7 +153,7 @@ function GalleryPage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
           <Quote className="h-10 w-10 text-[var(--safety)]" />
           <blockquote className="mt-6 font-display text-2xl sm:text-3xl leading-snug">
-            "Daph Brio has been very helpful to our department. I have worked with the team from
+            "Daphbrio has been very helpful to our department. I have worked with the team from
             2021 to date on various projects including P703 installations at Framing, Stamping, the
             new Bodyshop, TCF upgrades, PHEV factory, launch office renovations, TCF MP&amp;L and
             manufacturing office — the latest being Plant 4. They have been very key for us to

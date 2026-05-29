@@ -106,7 +106,7 @@ export function AdminShell({ children }: { children: ReactNode }) {
               {SidebarBody}
             </SheetContent>
           </Sheet>
-          <Link to="/admin" className="font-display font-bold">Daph Brio CMS</Link>
+          <Link to="/admin" className="font-display font-bold">Daphbrio CMS</Link>
           <Button size="sm" variant="ghost" onClick={signOut} aria-label="Sign out">
             <LogOut className="h-4 w-4" />
           </Button>

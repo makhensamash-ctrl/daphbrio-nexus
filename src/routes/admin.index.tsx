@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Newspaper, Image as ImageIcon, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/admin/")({
-  head: () => ({ meta: [{ title: "Dashboard — Daph Brio CMS" }, { name: "robots", content: "noindex,nofollow" }] }),
+  head: () => ({ meta: [{ title: "Dashboard — Daphbrio CMS" }, { name: "robots", content: "noindex,nofollow" }] }),
   component: AdminDashboard,
 });
 

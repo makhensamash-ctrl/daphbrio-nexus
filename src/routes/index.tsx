@@ -12,9 +12,9 @@ import g3 from "@/assets/gallery-dingli-lift.jpeg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Daph Brio Cabling — Enterprise IT Infrastructure & Industrial Cabling, South Africa" },
+      { title: "Daphbrio Cabling — Enterprise IT Infrastructure & Industrial Cabling, South Africa" },
       { name: "description", content: "Premier IT cabling and industrial infrastructure for enterprises in Gauteng and across South Africa. Fibre optic, CAT6A, cable trays, CCTV and electrical." },
-      { property: "og:title", content: "Daph Brio Cabling — Enterprise IT Infrastructure" },
+      { property: "og:title", content: "Daphbrio Cabling — Enterprise IT Infrastructure" },
       { property: "og:description", content: "Trusted by Ford, UJ, Capitec. OHS-compliant. 100% black-owned." },
       { property: "og:url", content: "/" },
     ],
@@ -40,7 +40,7 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <img
             src={heroImg}
-            alt="Daph Brio Cabling and Trading Project logo"
+            alt="Daphbrio Cabling and Trading Project logo"
             width={1920}
             height={1080}
             className="mx-auto w-full max-w-5xl rounded-xl shadow-elevated object-contain"
@@ -93,12 +93,12 @@ function Home() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-slate-50">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Why Daph Brio</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-primary font-semibold">Why Daphbrio</p>
             <h2 className="mt-3 font-display text-3xl sm:text-4xl font-bold">
               Enterprise-grade execution. Field-proven crew.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Daph Brio Trading and Projects (PTY) LTD is a 100% black-owned firm established in 2019.
+              Daphbrio Trading and Projects (PTY) LTD is a 100% black-owned firm established in 2019.
               Our strength lies in highly competent crews, strict OHS Act adherence, and a track record
               of large-scale infrastructure projects delivered on time and beyond expectation.
             </p>
@@ -124,7 +124,7 @@ function Home() {
             <div className="absolute -inset-4 gradient-hero opacity-10 rounded-2xl blur-2xl" />
             <img
               src={teamImg}
-              alt="Daph Brio installation crew in safety gear"
+              alt="Daphbrio installation crew in safety gear"
               loading="lazy"
               className="relative rounded-xl shadow-elevated w-full object-cover aspect-[4/5] sm:aspect-[5/4]"
             />

@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div>
           <img
             src={logo}
-            alt="Daph Brio Cabling and Trading Project logo"
+            alt="Daphbrio Cabling and Trading Project logo"
             className="h-14 w-auto rounded-sm object-cover"
           />
           <p className="mt-4 text-sm text-slate-400 leading-relaxed">
@@ -50,7 +50,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-slate-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between">
-          <p>© {new Date().getFullYear()} Daph Brio Cabling Trading and Projects (PTY) LTD. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Daphbrio Cabling Trading and Projects (PTY) LTD. All rights reserved.</p>
           <p>OHS Act compliant • Honesty • Integrity • Trust</p>
         </div>
       </div>
