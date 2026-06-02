@@ -17,7 +17,28 @@ export function TrustBar() {
         <p className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground text-center">
           Trusted by leading enterprises across South Africa
         </p>
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-6 items-center">
+
+        {/* Mobile: horizontal scrolling marquee */}
+        <div className="mt-6 sm:hidden overflow-hidden">
+          <div className="marquee-track">
+            {[...clients, ...clients].map((c, i) => (
+              <div
+                key={`${c.name}-${i}`}
+                className="flex-shrink-0 flex items-center justify-center px-6"
+              >
+                <img
+                  src={c.logo}
+                  alt={`${c.name} logo`}
+                  loading="lazy"
+                  className="max-h-14 w-auto object-contain opacity-80"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="mt-6 hidden sm:grid sm:grid-cols-4 gap-x-8 gap-y-6 items-center">
           {clients.map((c) => (
             <div key={c.name} className="flex items-center justify-center">
               <img
