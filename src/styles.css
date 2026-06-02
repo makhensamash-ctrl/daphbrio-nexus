@@ -142,3 +142,21 @@
     background-size: 48px 48px;
   }
 }
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .marquee-track {
+    animation: none;
+    width: auto;
+  }
+}
