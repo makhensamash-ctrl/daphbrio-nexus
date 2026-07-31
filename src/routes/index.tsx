@@ -39,7 +39,7 @@ function Home() {
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <img
-            src={heroImg}
+            src={heroImg.url}
             alt="Daphbrio Cabling and Trading Project logo"
             width={1920}
             height={1080}
