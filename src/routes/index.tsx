@@ -38,7 +38,7 @@ function Home() {
       <section className="relative isolate overflow-hidden bg-white">
         <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] items-center justify-center px-4 sm:px-6 lg:px-8 py-8">
           <img
-            src={heroImg.url}
+            src={heroImg}
             alt="Daphbrio Cabling and Trading Project logo"
             width={1920}
             height={1080}
