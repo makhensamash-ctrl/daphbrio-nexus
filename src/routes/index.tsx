@@ -48,7 +48,7 @@ function Home() {
       </section>
 
       {/* INTRO + CTA (moved out of hero) */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-muted px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--safety)]" />
