@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Award, Clock, Users, Cable, Network, Cpu, Zap,
 import { SiteLayout } from "@/components/SiteLayout";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/daphbrio-hero-logo.jpg.asset.json";
+import heroImg from "@/assets/daphbrio-hero-logo.jpg";
 import teamImg from "@/assets/why-daphbrio-rack.jpeg";
 import g1 from "@/assets/gallery-cable-tray-ceiling.jpeg";
 import g2 from "@/assets/gallery-network-cabinet.jpeg";
@@ -35,15 +35,14 @@ function Home() {
   return (
     <SiteLayout>
       {/* HERO — logo as the centerpiece */}
-      <section className="relative isolate overflow-hidden bg-[var(--slate-deep)]">
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <section className="relative isolate overflow-hidden bg-white">
+        <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] items-center justify-center px-4 sm:px-6 lg:px-8 py-8">
           <img
-            src={heroImg.url}
+            src={heroImg}
             alt="Daphbrio Cabling and Trading Project logo"
             width={1920}
             height={1080}
-            className="mx-auto w-full max-w-5xl rounded-xl shadow-elevated object-contain"
+            className="mx-auto h-auto w-full max-w-5xl max-h-[80vh] object-contain"
           />
         </div>
       </section>
