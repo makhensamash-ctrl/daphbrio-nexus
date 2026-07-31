@@ -36,13 +36,13 @@ function Home() {
     <SiteLayout>
       {/* HERO — logo as the centerpiece */}
       <section className="relative isolate overflow-hidden bg-white">
-        <div className="relative mx-auto flex min-h-[calc(100vh-6rem)] items-center justify-center px-4 sm:px-6 lg:px-8 py-8">
+        <div className="relative mx-auto flex min-h-0 items-center justify-center px-4 sm:px-6 lg:px-8 py-4 sm:py-8 lg:min-h-[calc(100vh-6rem)]">
           <img
             src={heroImg}
             alt="Daphbrio Cabling and Trading Project logo"
             width={1920}
             height={1080}
-            className="mx-auto h-auto w-full max-w-5xl max-h-[80vh] object-contain"
+            className="mx-auto h-auto w-full max-w-5xl max-h-[55vh] sm:max-h-[80vh] object-contain"
           />
         </div>
       </section>
