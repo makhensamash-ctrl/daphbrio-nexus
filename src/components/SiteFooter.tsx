@@ -1,8 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, Phone, Mail } from "lucide-react";
-import logoAsset from "@/assets/daphbrio-hero-logo.jpg.asset.json";
-
-const logo = logoAsset.url;
+import logo from "@/assets/daphbrio-logo-header.png";
 
 export function SiteFooter() {
   return (
