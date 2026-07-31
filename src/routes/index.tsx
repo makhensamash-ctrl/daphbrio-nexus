@@ -3,7 +3,7 @@ import { ArrowRight, ShieldCheck, Award, Clock, Users, Cable, Network, Cpu, Zap,
 import { SiteLayout } from "@/components/SiteLayout";
 import { TrustBar } from "@/components/TrustBar";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/daphbrio-logo.jpeg";
+import heroImg from "@/assets/daphbrio-hero-logo.jpg.asset.json";
 import teamImg from "@/assets/why-daphbrio-rack.jpeg";
 import g1 from "@/assets/gallery-cable-tray-ceiling.jpeg";
 import g2 from "@/assets/gallery-network-cabinet.jpeg";
@@ -39,7 +39,7 @@ function Home() {
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <img
-            src={heroImg}
+            src={heroImg.url}
             alt="Daphbrio Cabling and Trading Project logo"
             width={1920}
             height={1080}
